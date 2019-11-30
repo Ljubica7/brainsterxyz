@@ -1,0 +1,22 @@
+.navbar-color{
+    background: #ffbd4a;
+}
+.text-dark{
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.no-padding{
+    padding: 0%;
+}
+.jumbotron-gif{
+background-image: url("../img/synthesio-0301.gif");
+background-size: cover;
+background-attachment: scroll;
+background-position: 0px -100px;
+height: 20rem;
+}
+.text-light{
+    color: white;
+    font-weight: 400;
+}
