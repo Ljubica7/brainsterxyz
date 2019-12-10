@@ -2,14 +2,19 @@
 class Pages extends Controller {
     public function __construct()
     {
-    
+        $this->postModel = $this->model('Post');
+        $this->userModel = $this->model('User');
     }
-    public function index()
-    {       
+
+    public function index(){
         if (isLoggedIn()) {
             redirect('posts');
-        }
-        $data = [
+            }
+
+        $posts = $this->postModel->getPosts();
+
+        $data=[
+            'posts' => $posts,
             'title' => 'Brainster.xyz Labs',
             'description' => 'Simple social network'
         ];
