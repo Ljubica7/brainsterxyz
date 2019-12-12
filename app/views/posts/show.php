@@ -6,8 +6,8 @@
         Written by <?php echo $data['user']->name; ?> on <?php echo $data['post']->created_at; ?>
     </div>
     <p><?php echo $data['post']->body; ?></p>
-
-    <?php if ($data['post']->user_id == $_SESSION['user_id']) : ?>
+    <!-- if ($data['post']->user_id == $_SESSION['user_id']) -->
+    <?php if ($data['post']->user_id == isLoggedIn()) : ?>
         <hr>
         <a href="<?php echo URLROOT; ?>/posts/edit/<?php echo $data['post']->id; ?>" class="btn btn-dark">Edit</a>
 

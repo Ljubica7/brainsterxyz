@@ -9,14 +9,40 @@
 .no-padding{
     padding: 0%;
 }
+
+.title-text {
+    font-weight: 200;
+    color: #A9A9A9;
+}
+
 .jumbotron-gif{
 background-image: url("../img/synthesio-0301.gif");
 background-size: cover;
 background-attachment: scroll;
 background-position: 0px -100px;
-height: 20rem;
+height: 24rem;
 }
 .text-light{
     color: white;
     font-weight: 400;
+}
+.card-image-size{
+    height: 8em;
+    width: 8em;
+}
+
+.card-animation {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.card-height{
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;      
 }
