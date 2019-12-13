@@ -46,3 +46,13 @@ height: 24rem;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;      
 }
+
+.add-card{
+    font-size: 7em;
+    color: #A9A9A9;
+    /* font-weight: 100; */
+}
+.add-card:hover{
+    text-decoration: none;
+    color: black;
+}

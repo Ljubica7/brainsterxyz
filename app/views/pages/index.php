@@ -8,8 +8,21 @@
 <!-- start -->
   
     <div class="container py-5">
+        <?php flash('post_message'); ?>
     <div class="row">
+    <?php if (isLoggedIn()) : ?>
+        <div class="col-md-4 card-animation">
+            <div class="card mb-4 shadow-sm">
+            
+                <a class="mx-auto my-3 add-card" href="<?php echo URLROOT; ?>/posts/add">+</a>
 
+            <h2 class="card-title text-center title-text text-capitalize"> Add new Post</h2>
+
+            </div>
+        </div>
+    <?php endif; ?>
+       
+<!-- dfdsfsssssssssssssssss -->
     <?php foreach($data['posts'] as $post) : ?>
         <div class="col-md-4 card-animation">
           <div class="card mb-4 shadow-sm">
