@@ -2,24 +2,26 @@
     class Posts extends Controller {
         public function __construct()
         {
-            // if(!isLoggedIn()){
-            //     redirect('users/login');
-            // }
+            if(!isLoggedIn()){
+                redirect('users/login');
+            }
 
             $this->postModel = $this->model('Post');
             $this->userModel = $this->model('User');
         }
 
-        // public function index(){
-        //     //Get posts
-        //     $posts = $this->postModel->getPosts();
+        public function index(){
+            //Get posts
+            $posts = $this->postModel->getPosts();
 
-        //     $data=[
-        //         'posts' => $posts
-        //     ];
+            $data=[
+                'posts' => $posts,
+                'title' => 'Brainster.xyz Labs',
+                'description' => 'Simple social network'
+            ];
 
-        //     $this->view('posts/index', $data);
-        // }
+            $this->view('pages/index', $data);
+        }
 
         public function add(){
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {

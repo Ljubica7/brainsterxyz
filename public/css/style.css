@@ -56,3 +56,7 @@ height: 24rem;
     text-decoration: none;
     color: black;
 }
+
+.footer {
+    background-color: rgb(233, 233, 233);
+}

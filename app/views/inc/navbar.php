@@ -16,20 +16,20 @@
                     <a class="nav-link text-dark" href="<?php echo URLROOT; ?>/users/logout">Logout </a>
                 </li>                        
                 <?php endif; ?>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?php echo URLROOT; ?>">Home</a>
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-dark text-capitalize text-center" href="<?php echo URLROOT; ?>">Академија за </br> програмирање</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?php echo URLROOT; ?>/pages/about">About</a>
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-dark text-capitalize text-center" href="<?php echo URLROOT; ?>/pages/about">Академија за </br> маркетинг</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?php echo URLROOT; ?>">Home</a>
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-dark pt-4" href="<?php echo URLROOT; ?>">Блог</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="<?php echo URLROOT; ?>/pages/about">About</a>
+                <li class="nav-item mx-2">
+                    <a class="nav-link text-dark text-capitalize text-center" href="<?php echo URLROOT; ?>/pages/about">Вработи наши </br> студенти</a>
                 </li>
             </ul>   
         </div>
