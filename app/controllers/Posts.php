@@ -20,7 +20,7 @@
                 'description' => 'Simple social network'
             ];
 
-            $this->view('pages/index', $data);
+            $this->view('posts/index', $data);
         }
 
         public function add(){
@@ -52,6 +52,10 @@
                 }
                 if (empty($data['body'])) {
                     $data['body_err'] = 'Please enter body';
+                }
+
+                if (strlen($data['body']) > 200) {
+                    $data['body_err'] = 'Exceeded character limit. 200 characters max.';
                 }
 
                 //Make sure there is no errors

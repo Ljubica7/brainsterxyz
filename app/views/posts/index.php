@@ -1,25 +1,59 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<?php flash('post_message'); ?>
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <h1>Posts</h1>
-        </div>
-        <div class="col-md-6">
-            <a href="<?php echo URLROOT; ?>/posts/add" class="btn btn-primary pull-right">
-                <i class="fa fa-pencil"></i> Add Post
-            </a>
+    <div class="jumbotron jumbotron-fluid text-center jumbotron-gif">
+        <div class="container">
+            <h1 class="display-3 text-light"><?php echo $data['title']; ?></h1>
+            <p class="lead text-light"><?php echo $data['description']; ?></p>
         </div>
     </div>
-    <?php foreach($data['posts'] as $post) : ?>
-        <div class="card card-body mb-3">
-            <h4 class="card-title">
-                <?php echo $post->title; ?>
-            </h4>
-            <div class="bg-light p-2 mb-3">
-                written by <?php echo $post->name; ?> on <?php echo $post->postCreated; ?>
+<!-- start -->
+  
+    <div class="container py-5">
+        <?php flash('post_message'); ?>
+    <div class="row">
+    <?php if (isLoggedIn()) : ?>
+        <div class="col-md-4 card-animation">
+            <div class="card mb-4 shadow-sm">
+            
+                <a class="mx-auto my-3 add-card" href="<?php echo URLROOT; ?>/posts/add">+</a>
+
+            <h2 class="card-title text-center title-text text-capitalize"> Add new Post</h2>
+
             </div>
-            <p class="card-text"><?php echo $post->body; ?></p>
-            <a href="<?php echo URLROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="btn btn-dark">More</a>
         </div>
+    <?php endif; ?>
+       
+<!-- dfdsfsssssssssssssssss -->
+    <?php foreach($data['posts'] as $post) : ?>
+        <div class="col-md-4 card-animation">
+          <div class="card mb-4 shadow-sm">
+               
+                <img src="<?php echo $post->image; ?>" alt="" class="bd-placeholder-img card-img-top card-image-size mx-auto my-3">
+
+                <h2 class="card-title text-center title-text text-capitalize"> <?php echo $post->title; ?> </h2>
+                <h4 class="text-center title-text text-capitalize"> <?php echo $post->subtitle; ?> </h4>
+
+                <div class="card-body">
+                    <p class="card-text card-height text-justify"><?php echo $post->body; ?></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    
+                        <div class="btn-group">
+                        <a href="<?php echo URLROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="btn btn-sm btn-outline-secondary">More</a>       
+                        </div>
+
+                        <hr>
+                            <a href="<?php echo URLROOT; ?>/posts/edit/<?php echo $post->postId; ?>" class="btn btn-sm btn-success mr-2">Edit</a>
+                            <!-- $data['post']->id -->
+                            <form class="pull-right" action="<?php echo URLROOT; ?>/posts/delete/<?php echo $post->postId; ?>" method="POST">
+                                <input type="submit" value="Delete" class="btn btn-sm btn-danger">
+                            </form>
+
+                    </div>
+                </div>
+          </div>
+        </div>  
     <?php endforeach; ?>
+
+    </div>
+    </div>
+   
 <?php require APPROOT . '/views/inc/footer.php'; ?>
