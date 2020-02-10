@@ -27,12 +27,16 @@ html, body {
 background-image: url("../img/synthesio-0301.gif");
 background-size: cover;
 background-attachment: scroll;
-background-position: 0px -100px;
-height: 24rem;
+background-position: 0px -90px;
+height: 27rem;
 }
 .text-light{
     color: white;
     font-weight: 400;
+}
+.custom-text-light{
+    font-size: 3vh;
+    width: 60%;
 }
 .card-image-size{
     height: 8em;

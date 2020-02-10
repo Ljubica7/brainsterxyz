@@ -16,7 +16,7 @@ class Pages extends Controller {
         $data=[
             'posts' => $posts,
             'title' => 'Brainster.xyz Labs',
-            'description' => 'Simple social network'
+            'description' => 'Проекти на студентите на академиите за програмирање и маркетинг на Brainster'
         ];
 
         $this->view('pages/index', $data);
@@ -26,7 +26,7 @@ class Pages extends Controller {
     {
         $data = [
             'title' => 'About Us',
-            'description' => 'About me '
+            'description' => 'About me'
         ];
         $this->view('pages/about', $data);
     }

@@ -1,7 +1,7 @@
 </div>
     <footer class="footer py-1">
         <div class=" text-center">
-            <a class="navbar-brad"><img src="public/img/logo.png" alt="brainster logo" height="50"></a>
+            <a class="navbar-brad"><img src="https://lh3.googleusercontent.com/proxy/s-rPg9ArqmoYcVTu45EyS3S8iKC_MuOfHYFzhVwJEKza3zDu0aYvJskH_eK6gLns1wsu5onyPqTadikAIbDu0ClHmD0sct9z5vgcB_ZKp7o9CZSiFis-YDKIRh5Wsy5t" alt="brainster logo" height="50"></a>
         </div>
     </footer>
 

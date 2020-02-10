@@ -19,11 +19,8 @@
 
                     <div class="row">
                         <div class="col">
-                            <input type="submit" value="Login" class="btn btn-success btn-block">
-                        </div>
-                        <div class="col">
-                            <a href="<?php echo URLROOT; ?>/users/register" class="btn btn-light btn-block">No an account? Register</a>
-                        </div>
+                            <input type="submit" value="Login" class="btn btn-warning btn-block">
+                        </div>                        
                     </div>
                 </form>
             </div>
